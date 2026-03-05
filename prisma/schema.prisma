@@ -7,9 +7,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Livro { 
+model Livro {
   id        String  @id @default(auto()) @map("_id") @db.ObjectId
   nome      String
-  publicado String?
   autor     String
+  publicado String? 
+  descricao String? 
+  imagemUrl String?
 }
